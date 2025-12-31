@@ -1,0 +1,42 @@
+---
+// Index page - redirect to home or show a default landing
+import { getAllPages } from '../lib/content-api';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Fetch all published pages
+const allPages = await getAllPages();
+
+// Try to find a page with slug 'home' or 'index'
+const homePage = allPages.find(p => p.slug === 'home');
+if (homePage) {
+  return Astro.redirect('/home');
+}
+
+const indexPage = allPages.find(p => p.slug === 'index');
+if (indexPage) {
+  return Astro.redirect('/index');
+}
+
+// If no home/index page, redirect to first published page
+if (allPages.length > 0) {
+  return Astro.redirect('/' + allPages[0].slug);
+}
+
+// Otherwise show a placeholder
+---
+
+<BaseLayout title="Welcome" description="Welcome to your site">
+  <main class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <div class="text-center p-8">
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Welcome to Your Site
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+        No pages have been published yet. Create and publish pages in your LiteShow dashboard to get started.
+      </p>
+      <div class="text-sm text-gray-500 dark:text-gray-400">
+        Built with <span class="font-semibold">LiteShow</span> - AI-first, Git-powered CMS
+      </div>
+    </div>
+  </main>
+</BaseLayout>
