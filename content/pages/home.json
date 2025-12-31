@@ -1,0 +1,64 @@
+{
+  "page": {
+    "id": "c41ecd4f-0660-4cf2-aeda-664b2fa08a66",
+    "slug": "home",
+    "title": "Home",
+    "description": null,
+    "status": "published",
+    "metaTitle": null,
+    "metaDescription": null,
+    "ogImage": null,
+    "createdAt": "2025-12-31T04:50:30.000Z",
+    "updatedAt": "2025-12-31T04:51:25.000Z"
+  },
+  "blocks": [
+    {
+      "id": "07c6f22a-37a6-4604-8a03-911c6fa9ff61",
+      "type": "hero",
+      "order": 0,
+      "content": {
+        "headline": "Get cooking",
+        "subheadline": "You need to do it",
+        "ctaText": "Ok go",
+        "ctaUrl": "",
+        "backgroundImage": ""
+      },
+      "createdAt": "2025-12-31T04:50:52.000Z",
+      "updatedAt": "2025-12-31T04:50:52.000Z"
+    },
+    {
+      "id": "962ce554-0693-414b-b391-855c39c28a5c",
+      "type": "testimonials",
+      "order": 1,
+      "content": {
+        "title": "Testimonials",
+        "testimonials": [
+          {
+            "quote": "What is this?",
+            "author": "John",
+            "role": "",
+            "avatarUrl": ""
+          }
+        ]
+      },
+      "createdAt": "2025-12-31T04:51:10.000Z",
+      "updatedAt": "2025-12-31T04:51:10.000Z"
+    },
+    {
+      "id": "18c45ef2-13cd-47e5-ac67-41e04e4a7c0b",
+      "type": "faq",
+      "order": 2,
+      "content": {
+        "title": "FAQ",
+        "faqs": [
+          {
+            "question": "Woah?",
+            "answer": "Yeah"
+          }
+        ]
+      },
+      "createdAt": "2025-12-31T04:51:23.000Z",
+      "updatedAt": "2025-12-31T04:51:23.000Z"
+    }
+  ]
+}
